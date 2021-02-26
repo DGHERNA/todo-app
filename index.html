@@ -5,38 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="icon" type="image/png" size="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/app.css">
+    <link 
+    rel="icon" 
+    type="image/png" 
+    size="32x32" 
+    href="./images/favicon-32x32.png">
     <title>todo-app</title>
-</head>
-<body>
-    <header>
-        <h1>to do</h1>
-        <button><img src="./images/icon-moon.svg" alt="dark-mode"> </button>
-    </header>
-    <main>
-        <label for="todo">
-            <form action="">
-                <input type="text" id="todo" placeholder="Create a new to do...">
-            </form>
-        </label>
-        <ul>
-            <li>fhfhgfdhgdhg</li>
-            <button> <img src="./images/icon-cross.svg" alt="cross-icon"></button>
-        </ul>
-    </main>
-    <section>
-        <p><span>5</span> items left</p>
-        <button>Clear complited</button>
-    </section>
-    <section>
-        <button>All</button>
-        <button>Active</button>
-        <button>Complited</button>
-    </section>
-<footer>
-    <p>Challenge by <a href="https://www.frontendmentor.io/">Frontend mentor</a> Coded by Danny</p>
-</footer>
-<script src="js/app.js"></script>
-</body>
-</html>
+    </head>
+    <body>
+        <header>
+            <h1 class="heading">todo</h1>
+            <button class="theme-btn">
+                <img class="theme-icon" src="./images/icon-moon.svg" alt="darck-mode">
+            </button>
+        </header>
+        <main>
+            <div class="main-container">
+                <form id="form">
+                    <div class="checkbox"></div>
+                    <input id="input" type="text" placeholder="Create a new todo...">
+                </form>
+                <div class="todo-container">
+                    <div class="todo">
+                        <div class="checkbox"></div>
+                        <p class="todo-text">Wake up and do work out</p>
+                        <button class="remove-todo">
+                            <img src="./images/icon-cross.svg" alt="close-icon">
+                        </button>
+                    </div>
+                    <div class="todo-info">
+                        <p class="info-p items-left"><span>5</span>  items left</p>
+                        <div class="todo-filters">
+                            <button class="todo-filter active" id="all">All</button>
+                            <button class="active" id="active">Active</button>
+                            <button class="completed" id="completed">Completed</button>
+                        </div>
+                        <button id="clear-completed">Clear completed</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="attribution">
+                <h4>Challenge by</h4>
+                <a href="https://www.frontendmentor.io?ref=challenge" target="blank">
+                    Frontend Mentor.
+                </a>
+                <h4>Code by</h4>
+                <a href="https://github.com/DGHERNA" target="blank">DGHERNA.</a>
+            </div>
+        </footer>
+    <script src="js/app.js"></script>
+    </body>
+    </html>
